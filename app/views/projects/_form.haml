@@ -9,7 +9,7 @@
     = f.fields_for :account_attributes do |account|
       = account.label :account_id
       %br
-      = f.collection_select :account_id, @accounts, :id, :name
+      = f.collection_select :account_id, Account.all, :id, :name
   %div.field
     = f.fields_for :project_type_attributes do |project_type|
       = project_type.label :project_type_id
