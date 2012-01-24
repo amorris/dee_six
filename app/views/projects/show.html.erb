@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Account:</b>
+  <%= @project.account_id %>
+</p>
+
+<p>
+  <b>Project type:</b>
+  <%= @project.project_type_id %>
+</p>
+
+<p>
+  <b>Serial number:</b>
+  <%= @project.serial_number %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @project.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>

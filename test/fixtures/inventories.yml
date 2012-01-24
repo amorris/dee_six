@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  inventory_type_id: 1
+  serial_number: MyString
+  location: MyString
+
+two:
+  inventory_type_id: 1
+  serial_number: MyString
+  location: MyString

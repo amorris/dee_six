@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Serial number:</b>
+  <%= @evidence.serial_number %>
+</p>
+
+<p>
+  <b>Custodian:</b>
+  <%= @evidence.custodian_id %>
+</p>
+
+<p>
+  <b>Parent evidence:</b>
+  <%= @evidence.parent_evidence_id %>
+</p>
+
+<p>
+  <b>Evidence type:</b>
+  <%= @evidence.evidence_type_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_evidence_path(@evidence) %> |
+<%= link_to 'Back', evidences_path %>

@@ -1,0 +1,29 @@
+<h1>Listing evidences</h1>
+
+<table>
+  <tr>
+    <th>Serial number</th>
+    <th>Custodian</th>
+    <th>Parent evidence</th>
+    <th>Evidence type</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @evidences.each do |evidence| %>
+  <tr>
+    <td><%= evidence.serial_number %></td>
+    <td><%= evidence.custodian_id %></td>
+    <td><%= evidence.parent_evidence_id %></td>
+    <td><%= evidence.evidence_type_id %></td>
+    <td><%= link_to 'Show', evidence %></td>
+    <td><%= link_to 'Edit', edit_evidence_path(evidence) %></td>
+    <td><%= link_to 'Destroy', evidence, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Evidence', new_evidence_path %>

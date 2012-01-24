@@ -1,0 +1,23 @@
+<h1>Listing custodians</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @custodians.each do |custodian| %>
+  <tr>
+    <td><%= custodian.name %></td>
+    <td><%= link_to 'Show', custodian %></td>
+    <td><%= link_to 'Edit', edit_custodian_path(custodian) %></td>
+    <td><%= link_to 'Destroy', custodian, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Custodian', new_custodian_path %>

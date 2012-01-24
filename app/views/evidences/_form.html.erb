@@ -1,0 +1,33 @@
+<%= form_for(@evidence) do |f| %>
+  <% if @evidence.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@evidence.errors.count, "error") %> prohibited this evidence from being saved:</h2>
+
+      <ul>
+      <% @evidence.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :serial_number %><br />
+    <%= f.number_field :serial_number %>
+  </div>
+  <div class="field">
+    <%= f.label :custodian_id %><br />
+    <%= f.text_field :custodian_id %>
+  </div>
+  <div class="field">
+    <%= f.label :parent_evidence_id %><br />
+    <%= f.text_field :parent_evidence_id %>
+  </div>
+  <div class="field">
+    <%= f.label :evidence_type_id %><br />
+    <%= f.number_field :evidence_type_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,29 @@
+<h1>Listing projects</h1>
+
+<table>
+  <tr>
+    <th>Account</th>
+    <th>Project type</th>
+    <th>Serial number</th>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @projects.each do |project| %>
+  <tr>
+    <td><%= project.account_id %></td>
+    <td><%= project.project_type_id %></td>
+    <td><%= project.serial_number %></td>
+    <td><%= project.name %></td>
+    <td><%= link_to 'Show', project %></td>
+    <td><%= link_to 'Edit', edit_project_path(project) %></td>
+    <td><%= link_to 'Destroy', project, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Project', new_project_path %>
