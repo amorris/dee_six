@@ -51,7 +51,48 @@ div {
   ul li {
     font-size: 12px;
     list-style: square; } }
+
+#main
+{
+  margin:15px;
+}
+#header
+{
+  height:75px;
+}
 #header h1 
 {
-  font-size:24px  
+  margin-top: 25px;
+  float:left;
+  font-size:24px;  
+}
+
+#user-navigation
+{
+  margin-top: 60px;
+  color: white;
+  float:right;
+  ul, li 
+  {
+    list-style:none;
+    display: inline;
+    margin-right: 20px;
+  }
+}
+
+#main-navigation
+{
+  margin-top: 60px;
+  float:left;
+  ul, li 
+  {
+    list-style:none;
+    display: inline;
+    margin-right: 20px
+  }
+}
+
+table th {
+  background-color: #333;
+  color: #fff
 }
